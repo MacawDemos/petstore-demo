@@ -43,7 +43,7 @@ public class DbConnector {
 //					connectionProperties.getProperty(DB_USERNAME_KEY),
 //					connectionProperties.getProperty(DB_PASSWORD_KEY));
 			return DriverManager.getConnection(connectionProperties.getProperty(DB_URL_KEY),
-					connectionProperties.getProperty(DB_USERNAME_KEY),"abcd123$");
+					connectionProperties.getProperty(DB_USERNAME_KEY),connectionProperties.getProperty(DB_PASSWORD_KEY));
 		} catch (Exception e) {
 			// TOOD log or throw exception
 		}
