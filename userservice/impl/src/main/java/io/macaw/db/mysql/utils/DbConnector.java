@@ -40,7 +40,7 @@ public class DbConnector {
 		try {
 			Class.forName(connectionProperties.getProperty(DB_DRIVER_CLASSNAME_KEY));
 			return DriverManager.getConnection(connectionProperties.getProperty(DB_URL_KEY),
-					connectionProperties.getProperty(DB_USERNAME_KEY),"abcd123$");
+					connectionProperties.getProperty(DB_USERNAME_KEY),connectionProperties.getProperty(DB_PASSWORD_KEY));
 		} catch (Exception e) {
 			// TOOD log or throw exception
 		}
