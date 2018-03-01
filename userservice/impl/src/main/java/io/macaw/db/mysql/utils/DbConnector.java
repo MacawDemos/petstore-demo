@@ -43,6 +43,7 @@ public class DbConnector {
 					connectionProperties.getProperty(DB_USERNAME_KEY),connectionProperties.getProperty(DB_PASSWORD_KEY));
 		} catch (Exception e) {
 			// TOOD log or throw exception
+			throw new RuntimeException("Exception while creating connection",e);
 		}
 		return null;
 	}
