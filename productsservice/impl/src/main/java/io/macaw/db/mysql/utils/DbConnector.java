@@ -52,6 +52,7 @@ public class DbConnector {
 	
 	public void releaseConnection(Connection connection){
 		try {
+		 	if(connection != null)
 			connection.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
