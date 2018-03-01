@@ -48,6 +48,7 @@ public class Userservice implements com.cfx.service.api.Service, io.macaw.demo.p
 		dto.setUserid(account.getUserid());
 		dto.setFirstname(account.getFirstname());
 		dto.setLastname(account.getLastname());
+		dto.setEmail(account.getEmail());
 		dto.setStatus(account.getStatus());
 		dto.setAddr1(account.getAddr1());
 		dto.setAddr2(account.getAddr2());
@@ -61,6 +62,7 @@ public class Userservice implements com.cfx.service.api.Service, io.macaw.demo.p
 			new AccountDAO().insert(dto);
 		} catch (Exception e) {
 			e.printStackTrace();
+			throw new RuntimeException("Exception while adding account",e);
 		}
 
 		return account;
