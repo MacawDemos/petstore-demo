@@ -25,7 +25,7 @@ create table ACCOUNT (
     email varchar(80) not null,
     firstname varchar(80) not null,
     lastname varchar(80) not null,
-    status varchar(2)  null,
+    status varchar(5)  null,
     addr1 varchar(80) not null,
     addr2 varchar(40) null,
     city varchar(80) not  null,
