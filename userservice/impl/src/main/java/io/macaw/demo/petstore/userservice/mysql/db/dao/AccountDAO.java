@@ -53,7 +53,7 @@ public class AccountDAO extends BaseDAO<Account> {
 	public String getInsertQuery(Account dto) {
 		return "insert into " +getName()
 				+ "(userid,email,firstname,lastname,status,addr1,addr2,city,state,zip,country,phone) " + " values('"
-				+dto.getUserid()+"','"+dto.getEmail()+"','"+dto.getFirstname()+"',+'"+dto.getLastname()
+				+dto.getUserid()+"','"+dto.getEmail()+"','"+dto.getFirstname()+"','"+dto.getLastname()
 				+"','"+dto.getStatus()+"','"+dto.getAddr1()+"','"+dto.getAddr2()+"','"+dto.getCity()
 				+ "','"+dto.getState()+"','"+dto.getZip()+"','"+dto.getCountry()+"','"+dto.getPhone()
 				+ "' )";
