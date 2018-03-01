@@ -21,7 +21,7 @@ public class ProfileDAO extends BaseDAO<Profile> {
 			if (rs != null) {
 				profile.setUserid(rs.getString("userid"));
 				profile.setLangpref(rs.getString("langpref"));
-				profile.setFavcategory(rs.getString("favcateogory"));
+				profile.setFavcategory(rs.getString("favcategory"));
 				profile.setOptedfor(rs.getBoolean("optedfor"));
 				profile.setBanneropt(rs.getBoolean("banneropt"));
 			}
@@ -63,7 +63,7 @@ public class ProfileDAO extends BaseDAO<Profile> {
 		profileEntity.setUserid(profile.getUserid());
 		profileEntity.setFavcategory(profile.getFavcategory());
 		profileEntity.setBanneropt(profile.getBanneropt());
-		profileEntity.setLangpref(profile.getLangref());
+		profileEntity.setLangpref(profile.getLangpref());
 		profileEntity.setOptedfor(profile.getOptedfor());
 		return profileEntity;
 	}
