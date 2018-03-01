@@ -44,6 +44,7 @@ public abstract class BaseDAO<D extends BaseDTO> {
         	stmt.executeUpdate(insertQuery);
         } catch (Exception e) {
         	// TODO log or throw the exception
+		throw new RuntimeException("Execption while inserting",e);
         } finally {
         	dbConnector.releaseConnection(conn);
         }
@@ -57,6 +58,7 @@ public abstract class BaseDAO<D extends BaseDTO> {
         	stmt.executeUpdate(insertQuery);
         } catch (Exception e) {
         	// TODO log or throw the exception
+		throw new RuntimeException("Execption while updating",e);
         } finally {
         	dbConnector.releaseConnection(conn);
         }
