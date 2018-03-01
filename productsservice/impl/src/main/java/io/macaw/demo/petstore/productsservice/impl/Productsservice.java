@@ -50,6 +50,7 @@ public class Productsservice
 			new CategoryDAO().insert(dto);
 		} catch (Exception e) {
 			e.printStackTrace();
+			throw new RuntimeException("Exception while adding category",e);
 		}
 		return category;
 	}
@@ -66,6 +67,7 @@ public class Productsservice
 			new ProductDAO().insert(dto);
 		} catch (Exception e) {
 			e.printStackTrace();
+			throw new RuntimeException("Exception while adding product",e);
 		}
 
 		return product;
@@ -91,6 +93,7 @@ public class Productsservice
 			new ItemDAO().insert(dto);
 		} catch (Exception e) {
 			e.printStackTrace();
+			throw new RuntimeException("Exception while adding item",e);
 		}
 		return item;
 	}
@@ -107,6 +110,7 @@ public class Productsservice
 			new SupplierDAO().insert(dto);
 		} catch (Exception e) {
 			e.printStackTrace();
+			throw new RuntimeException("Exception while adding supplier",e);
 		}
 		return supplier;
 	}
@@ -123,6 +127,7 @@ public class Productsservice
 			new CategoryDAO().update(dto);
 		} catch (Exception e) {
 			e.printStackTrace();
+			throw new RuntimeException("Exception while updating category",e);
 		}
 		return category;
 	}
@@ -139,6 +144,7 @@ public class Productsservice
 			new ProductDAO().update(dto);
 		} catch (Exception e) {
 			e.printStackTrace();
+			throw new RuntimeException("Exception while updating product",e);
 		}
 		return product;
 	}
@@ -163,6 +169,7 @@ public class Productsservice
 			new ItemDAO().update(dto);
 		} catch (Exception e) {
 			e.printStackTrace();
+			throw new RuntimeException("Exception while updating item",e);
 		}
 		return item;
 	}
@@ -178,6 +185,7 @@ public class Productsservice
 			new SupplierDAO().update(dto);
 		} catch (Exception e) {
 			e.printStackTrace();
+			throw new RuntimeException("Exception while updating supplier",e);
 		}
 		return supplier;
 
@@ -189,6 +197,7 @@ public class Productsservice
 			new CategoryDAO().deleteById(categoryid);
 		} catch (Exception e) {
 			e.printStackTrace();
+			throw new RuntimeException("Exception while deleting category",e);
 		}
 		return null;
 	}
@@ -199,6 +208,7 @@ public class Productsservice
 			new ProductDAO().deleteById(productid);
 		} catch (Exception e) {
 			e.printStackTrace();
+			throw new RuntimeException("Exception while delete product",e);
 		}
 		return null;
 	}
@@ -209,6 +219,7 @@ public class Productsservice
 			new ItemDAO().deleteById(itemid);
 		} catch (Exception e) {
 			e.printStackTrace();
+		throw new RuntimeException("Exception while deleting item",e);
 		}
 		return null;
 
@@ -221,6 +232,7 @@ public class Productsservice
 			new SupplierDAO().deleteById(supplierid);
 		} catch (Exception e) {
 			e.printStackTrace();
+			throw new RuntimeException("Exception while deleting supplier",e);
 		}
 		return null;
 	}
