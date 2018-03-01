@@ -76,6 +76,7 @@ public class Userservice implements com.cfx.service.api.Service, io.macaw.demo.p
 		dto.setUserid(account.getUserid());
 		dto.setFirstname(account.getFirstname());
 		dto.setLastname(account.getLastname());
+		dto.setEmail(account.getEmail());
 		dto.setStatus(account.getStatus());
 		dto.setAddr1(account.getAddr1());
 		dto.setAddr2(account.getAddr2());
@@ -116,7 +117,7 @@ public class Userservice implements com.cfx.service.api.Service, io.macaw.demo.p
 		Profile dto = new Profile();
 		dto.setUserid(profile.getUserid());
 		dto.setOptedfor(profile.getOptedfor());
-		dto.setLangref(profile.getLangpref());
+		dto.setLangpref(profile.getLangpref());
 		dto.setFavcategory(profile.getFavcategory());
 		dto.setBanneropt(profile.getBanneropt());
 		try {
@@ -134,7 +135,7 @@ public class Userservice implements com.cfx.service.api.Service, io.macaw.demo.p
 		Profile dto = new Profile();
 		dto.setUserid(profile.getUserid());
 		dto.setOptedfor(profile.getOptedfor());
-		dto.setLangref(profile.getLangpref());
+		dto.setLangpref(profile.getLangpref());
 		dto.setFavcategory(profile.getFavcategory());
 		dto.setBanneropt(profile.getBanneropt());
 		try {
