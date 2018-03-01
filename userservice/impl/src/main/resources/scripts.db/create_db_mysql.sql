@@ -40,7 +40,7 @@ create table PROFILE (
     userid varchar(80) not null,
     langpref varchar(80) not null,
     favcategory varchar(30),
-    mylistopt varchar(5),
+    optedfor varchar(5),
     banneropt varchar(5),
   primary key (userid)
 )  ENGINE = InnoDB;
