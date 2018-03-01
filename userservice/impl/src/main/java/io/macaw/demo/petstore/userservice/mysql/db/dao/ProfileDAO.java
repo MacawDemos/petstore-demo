@@ -20,7 +20,7 @@ public class ProfileDAO extends BaseDAO<Profile> {
 		try {
 			if (rs != null) {
 				profile.setUserid(rs.getString("userid"));
-				profile.setLangref(rs.getString("langref"));
+				profile.setLangpref(rs.getString("langpref"));
 				profile.setFavcategory(rs.getString("favcateogory"));
 				profile.setOptedfor(rs.getBoolean("optedfor"));
 				profile.setBanneropt(rs.getBoolean("banneropt"));
@@ -46,13 +46,13 @@ public class ProfileDAO extends BaseDAO<Profile> {
 	@Override
 	public String getInsertQuery(Profile dto) {
 		return "insert into " + getName() + "(userid,langref,favcategory,optedfor,banneropt)" + " values('"
-				+ dto.getUserid() + "','" + dto.getLangref() + "','" + dto.getFavcategory() + "','" + dto.getOptedfor()
+				+ dto.getUserid() + "','" + dto.getLangpref() + "','" + dto.getFavcategory() + "','" + dto.getOptedfor()
 				+ "','" + dto.getBanneropt() + "')";
 	}
 
 	@Override
 	public String getUpdateQuery(Profile dto) {
-		return "update " + getName() + " set langref ='" + dto.getLangref() + "',favcategory='" + dto.getFavcategory()
+		return "update " + getName() + " set langref ='" + dto.getLangpref() + "',favcategory='" + dto.getFavcategory()
 				+ "',optedfor='" + dto.getOptedfor() + "','" + dto.getBanneropt() + "' where userid='" + dto.getUserid()
 				+ "'";
 	}
