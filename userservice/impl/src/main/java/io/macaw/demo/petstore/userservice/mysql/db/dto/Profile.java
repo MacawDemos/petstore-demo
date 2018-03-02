@@ -14,11 +14,11 @@ public class Profile extends BaseDTO {
 		this.userid = userid;
 	}
 
-	public String getLangref() {
-		return langref;
+	public String getLangpref() {
+		return langpref;
 	}
 
-	public void setLangref(String langref) {
+	public void setLangpref(String langpref) {
 		this.langref = langref;
 	}
 
@@ -47,7 +47,7 @@ public class Profile extends BaseDTO {
 	}
 
 	private String userid;
-	private String langref;
+	private String langpref;
 	private String favcategory;
 	private Boolean optedfor;
 	private Boolean banneropt;
